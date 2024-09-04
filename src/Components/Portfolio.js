@@ -100,10 +100,12 @@ const Portfolio = () => {
   ]
   return (
     <div>
-      <Container fluid className='Portfolio text-white text-center fw-bold' id='portfolio'>
+      <Container fluid className='Portfolio text-white text-center fw-bold py-5' id='portfolio'>
         <Row>
-          <h2 className='wow fadeInDown'>my Portfolio</h2>
-          <p className='mb-5 wow fadeInDown'>Here you can see some of my projects</p>
+          <Col md='12'>
+            <h2 className='wow fadeInDown'>my Portfolio</h2>
+            <p className='mb-5 wow fadeInDown'>Here you can see some of my projects</p>
+          </Col>
 
           {projects.map((project) => (
             <Col key={project.id} className='mb-4 wow fadeInUp' data-wow-delay=".1s" md="4">
@@ -111,8 +113,8 @@ const Portfolio = () => {
                 <img className='img-fluid' src={project.img_src} alt="projects" />
                 <div className="icons">
                   <p>{project.title}</p>
-                  <a href={project.link_github} target='_blank' rel="noreferrer"><i className='fab fa-github text-white m-2'></i></a>
-                  <a href={project.link_vercel} target='_blank' rel="noreferrer"><i className='fas fa-link text-white m-2'></i></a>
+                  <a href={project.link_github} target='_blank' rel="noreferrer"><i className='fab fa-github text-blue m-2'></i></a>
+                  <a href={project.link_vercel} target='_blank' rel="noreferrer"><i className='fas fa-link text-blue m-2'></i></a>
                 </div>
               </div>
             </Col>

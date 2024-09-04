@@ -253,20 +253,22 @@ const AllProjects = () => {
     ]
 
     return (
-        <div>
+        <div className='portfolio-page'>
             <NavBar />
-            <Container fluid className='Portfolio all-portfolio text-white text-center fw-bold' id='Portfolio'>
+            <Container className='all-portfolio text-white text-center fw-bold'>
                 <Row>
-                    <h2 className=''>All Projects</h2>
-                    <p className='mb-5'>Here you can see some of my projects</p>
+                    <Col md='12' className='project-title'>
+                        <h2 className=''>All Projects</h2>
+                        <p className='mb-5'>Here you can see some of my projects</p>
+                    </Col>
                     {projects.map((project) => (
                         <Col key={project.id} className='mb-4 wow fadeInUp' data-wow-delay=".3s" md="4">
                             <div className="projects">
                                 <img className='img-fluid' src={project.img_src} alt="projects" />
                                 <div className="icons">
                                     <p>{project.title}</p>
-                                    <a href={project.link_github} target='_blank' rel="noreferrer"><i className='fab fa-github text-white m-2'></i></a>
-                                    <a href={project.link_vercel} target='_blank' rel="noreferrer"><i className='fas fa-link text-white m-2'></i></a>
+                                    <a href={project.link_github} target='_blank' rel="noreferrer"><i className='fab fa-github text-blue m-2'></i></a>
+                                    <a href={project.link_vercel} target='_blank' rel="noreferrer"><i className='fas fa-link text-blue m-2'></i></a>
                                 </div>
                             </div>
                         </Col>

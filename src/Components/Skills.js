@@ -5,7 +5,7 @@ import { Col, Container, Row } from 'reactstrap'
 const Skills = () => {
     return (
         <div>
-            <Container className='skills my-5' id='skills'>
+            <Container className='skills py-5' id='skills'>
                 <Row>
                     <h2 className='text-blue text-center fw-bold wow bounceInDown'>my skills</h2>
                     <Col md="12" className='text-center mt-2'>

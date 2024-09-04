@@ -135,7 +135,6 @@ body {
     justify-content: flex-start;
     padding: 16px 5px;
     display: none;
-    background-color: var(--bg-color);
 }
 
 .burger-menu {
@@ -565,6 +564,10 @@ body {
         margin-top: 50px;
     }
 
+    .header a {
+        margin-bottom: 10px !important;
+    }
+
     .header button {
         margin-bottom: 50px !important;
     }
@@ -658,21 +661,28 @@ body {
 /* start Portfolio  */
 .Portfolio {
     background-color: var(--main-color);
-    padding: 50px 100px;
+    padding: 50px 100px !important;
+}
+
+.portfolio-page {
+    background-color: var(--main-color);
 }
 
 .all-portfolio {
-    padding-top: 10%;
+    padding-top: 10% !important;
+    background-color: var(--main-color);
 }
 
-.Portfolio .projects {
+.Portfolio .projects,
+.all-portfolio .projects {
     position: relative;
     padding: 7px;
     background-color: #cccccca4;
     border-radius: 10px;
 }
 
-.Portfolio .projects img {
+.Portfolio .projects img,
+.all-portfolio .projects img {
     border-radius: 10px;
     width: 100%;
     height: auto;
@@ -683,7 +693,8 @@ body {
     backface-visibility: hidden;
 }
 
-.Portfolio .projects .icons {
+.Portfolio .projects .icons,
+.all-portfolio .projects .icons {
     transition: .5s ease;
     opacity: 0;
     position: absolute;
@@ -694,26 +705,38 @@ body {
     font-size: 30px;
 }
 
-.Portfolio .projects .icons p {
+.Portfolio .projects .icons p,
+.all-portfolio .projects .icons p {
     font-size: 14px;
     margin-top: 10px;
 }
 
-.Portfolio .projects:hover {
+.Portfolio .projects:hover,
+.all-portfolio .projects:hover {
     cursor: pointer;
 }
 
-.Portfolio .projects:hover img {
+.Portfolio .projects:hover img,
+.all-portfolio .projects:hover img {
     opacity: 0.3;
 }
 
-.Portfolio .projects:hover .icons {
+.Portfolio .projects:hover .icons,
+.all-portfolio .projects:hover .icons {
     opacity: 1;
 }
 
 @media (max-width:576px) {
     .Portfolio {
-        padding: 20px;
+        padding: 20px !important;
+    }
+
+}
+
+@media (max-width:992px) {
+
+    .project-title {
+        padding-top: 100px !important;
     }
 }
 
@@ -765,6 +788,10 @@ textarea.form-control {
 /* End logo  */
 
 /* start footer  */
+.footer {
+    padding-bottom: 50px;
+}
+
 .footer .icons {
     font-size: 30px;
 }
